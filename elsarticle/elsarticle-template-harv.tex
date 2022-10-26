@@ -1,0 +1,528 @@
+%% 
+%% Copyright 2007-2020 Elsevier Ltd
+%% 
+%% This file is part of the 'Elsarticle Bundle'.
+%% ---------------------------------------------
+%% 
+%% It may be distributed under the conditions of the LaTeX Project Public
+%% License, either version 1.2 of this license or (at your option) any
+%% later version.  The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.2 or later is part of all distributions of LaTeX
+%% version 1999/12/01 or later.
+%% 
+%% The list of all files belonging to the 'Elsarticle Bundle' is
+%% given in the file `manifest.txt'.
+%% 
+%% Template article for Elsevier's document class `elsarticle'
+%% with harvard style bibliographic references
+
+\documentclass[preprint,12pt,authoryear]{elsarticle}
+
+%% Use the option review to obtain double line spacing
+%% \documentclass[authoryear,preprint,review,12pt]{elsarticle}
+
+%% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn
+%% for a journal layout:
+%% \documentclass[final,1p,times,authoryear]{elsarticle}
+%% \documentclass[final,1p,times,twocolumn,authoryear]{elsarticle}
+%% \documentclass[final,3p,times,authoryear]{elsarticle}
+%% \documentclass[final,3p,times,twocolumn,authoryear]{elsarticle}
+%% \documentclass[final,5p,times,authoryear]{elsarticle}
+%% \documentclass[final,5p,times,twocolumn,authoryear]{elsarticle}
+
+%% For including figures, graphicx.sty has been loaded in
+%% elsarticle.cls. If you prefer to use the old commands
+%% please give \usepackage{epsfig}
+
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amsthm}
+
+\usepackage{amsmath}
+
+\usepackage{booktabs} % 导入三线表需要的宏包
+\usepackage{longtable}% 导入跨页表格所需宏包
+
+%% The lineno packages adds line numbers. Start line numbering with
+%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+%% for the whole article with \linenumbers.
+%% \usepackage{lineno}
+
+\journal{Nuclear Physics B}
+
+\begin{document}
+
+\begin{frontmatter}
+
+%% Title, authors and addresses
+
+%% use the tnoteref command within \title for footnotes;
+%% use the tnotetext command for theassociated footnote;
+%% use the fnref command within \author or \affiliation for footnotes;
+%% use the fntext command for theassociated footnote;
+%% use the corref command within \author for corresponding author footnotes;
+%% use the cortext command for theassociated footnote;
+%% use the ead command for the email address,
+%% and the form \ead[url] for the home page:
+%% \title{Title\tnoteref{label1}}
+%% \tnotetext[label1]{}
+%% \author{Name\corref{cor1}\fnref{label2}}
+%% \ead{email address}
+%% \ead[url]{home page}
+%% \fntext[label2]{}
+%% \cortext[cor1]{}
+%% \affiliation{organization={},
+%%            addressline={}, 
+%%            city={},
+%%            postcode={}, 
+%%            state={},
+%%            country={}}
+%% \fntext[label3]{}
+
+\title{Parallel vehicle scheduling 
+with compatibility constraints and makespan objectives: 
+An application to automated guided vehicle  scheduling}
+
+%% use optional labels to link authors explicitly to addresses:
+%% \author[label1,label2]{}
+%% \affiliation[label1]{organization={},
+%%             addressline={},
+%%             city={},
+%%             postcode={},
+%%             state={},
+%%             country={}}
+%%
+%% \affiliation[label2]{organization={},
+%%             addressline={},
+%%             city={},
+%%             postcode={},
+%%             state={},
+%%             country={}}
+
+\author{Mo Di}
+
+\affiliation{organization={},%Department and Organization
+            addressline={}, 
+            city={},
+            postcode={}, 
+            state={},
+            country={}}
+
+\begin{abstract}
+%% Text of abstract
+
+\end{abstract}
+
+%%Graphical abstract
+\begin{graphicalabstract}
+%\includegraphics{grabs}
+\end{graphicalabstract}
+
+%%Research highlights
+\begin{highlights}
+\item Research highlight 1
+\item Research highlight 2
+\end{highlights}
+
+\begin{keyword}
+    Scheduling problem \sep
+    Minimum makespan \sep
+    Eligibility constraints \sep
+    Automated guided vehicle \sep
+    Benders decomposition
+%% keywords here, in the form: keyword \sep keyword
+
+%% PACS codes here, in the form: \PACS code \sep code
+
+%% MSC codes here, in the form: \MSC code \sep code
+%% or \MSC[2008] code \sep code (2000 is the default)
+
+\end{keyword}
+
+\end{frontmatter}
+
+%% \linenumbers
+
+%% main text
+\section{Introduction}
+
+In this paper, a scheduling problem of multiple vehicles and product types is investigated. 
+The problem has the  characteristics of both vehicle problems with pickups and deliveries,
+and unrelated and uniform parallel machine scheduling problems.
+
+
+\section{Literature review}
+
+\subsection{Vehicle routing problem to minimize makespan}
+
+Vehicle Routing Problems with Pickups and Deliveries
+
+The Vehicle Routing Problem (VRP) is a classical optimization problem, 
+which aims to select the optimal route for vehicles based on one or more depots,
+under specific conditions (i.e. time windows, capacity constraints).
+
+Various exact or heuristic algorithms are developed to solve different types of VRPs.
+
+\subsection{Unrelated and uniform parallel machine scheduling}
+
+As another famous optimization problem, Machine Scheduling (MS) 
+is widely applied in manufacturing, logistics.
+
+$R_r||C_{\max}$                                                                                                                                                      
+
+\subsection{Summary and contributions of the paper}
+
+\section{Problem formulation}
+
+In this section, we first formally define the parallel vehicle scheduling problem 
+with compatibility constraints and makespan objectives, 
+and then propose MILP models.
+
+\subsection{Problem definition}
+
+To be easier to describe this problem, the notations used in this paper are listed in Table \ref{tab1}.
+
+\subsection{Consumption and preprocessing}
+
+\subsection{Mathematical formulation}
+
+\begin{longtable}{cl}% 其中，tabular是表格内容的环境；c表示centering，即文本格式居中；c的个数代表列的个数
+    \caption{Notations}\label{tab1}\\
+    \toprule [2pt] % 设置线宽
+    sets& definitions \\
+    \midrule [1pt]  
+    $K$& set of vehicles \\
+    $V$& set of machines \\
+    $W$& set of product type \\
+    $D$& set of   production plan,
+    $D=\{(i,j)|i,j\in V\backslash \{v_0\}\}$\\
+    $D_w$& set of production plan with particular product type, $w \in W$ \\
+    $R$& set of gernal task sequence length, $R={1,2,...}$ \\
+    \midrule [1pt]     
+    parameters & definitions  \\ %换行
+    \midrule [1pt]
+    $v_0$& the depot, $v_0\in V$ \\
+    $c_k$& capacity of vehicles $k$, $k\in K$ \\
+    $s_i^k$& servcing time of vehicle $k$ for machine $i$, $i\in V,k\in K$ \\
+    $t_{ij}$& travel cost from machine $i$ to $j$, $i,j\in V$ \\ 
+    $q_{ij}$& amount of demand $(i,j)$, $(i,j)\in D$ \\
+    $T_m$& maximum makespan \\
+    \midrule[1pt]
+    variables & definitions \\
+    \midrule[1pt]
+    $u_w^k$& whether vehicle $k$ loading products of $w$ type \\
+    $x_{ir}^k$& whether vehicle $k$ serve machine $i$ as its $r$-th task \\
+    $\psi_{ir}^k$& reserve of last task of vehicle $k$ in $r$-th one \\
+    $\epsilon_r^k$& waiting time of vehicle $k$ before $r$-th task \\
+    $g_{ir}$& avaliable time of machine $i$ in $r$-th task \\
+    $T_f$& gernal finish time \\
+    & $w\in W,i,j\in V,k\in K,r\in R$\\
+    \bottomrule [2pt]
+\end{longtable}
+
+Unrelated parallel machine scheduling problem with the objective of 
+minimizing the maximal completion time($R||C_{\max}$) and restrict PDP
+
+objective
+\begin{equation}
+    \min T_f
+\label{msobj}
+\end{equation}
+
+subject to
+
+orgin and destination
+\begin{equation}
+    x_{v_0,0}^k,x_{v_0,|R|+1}^k=1,\forall k\in K 
+\label{od}
+\end{equation}
+
+\begin{equation}
+    x_{v_0,r}^k,x_{i,0}^k=0,\forall i\in V, k\in K,r\in R 
+\label{dpt}
+\end{equation}
+
+single occupied
+\begin{equation}
+    \sum_{i\in V,k\in K}{x_{ir}^k}\leq 1, \forall r\in R
+\label{so}
+\end{equation}
+
+\begin{equation}
+    \sum_{i\in V,k\in K}{x_{ir}^k}\geq \sum_{i\in V,k\in K}{x_{i,r+1}^k}, \forall r\in R
+\label{zeroafter}
+\end{equation}
+
+single vehicle sequence
+\begin{equation}
+    \psi_{ir}^k=x_{ir}^k+\psi_{i,r-1}^k
+    \cdot (1-\sum_{j\in V}{x_{jr}^k}),\forall i\in V,k\in K,r\in R
+\label{svs}
+\end{equation}
+\begin{equation}
+    \begin{split}
+        g_{i,r-1}-T_m\cdot \sum_{k\in K}{x_{ir}^k} \leq g_{ir}
+        \leq g_{i,r-1}+T_m\cdot \sum_{k\in K}{x_{ir}^k},\\
+        \forall i\in V ,r\in R
+    \end{split}
+\label{god}
+\end{equation}
+\begin{equation}
+    \begin{split}
+        -T_m\cdot \sum_{i\in V}{x_{ir}^k} \leq \epsilon_r^k \leq T_m\cdot \sum_{i\in V}{x_{ir}^k},
+        \forall r\in R,k\in K
+    \end{split}
+\label{eod}
+\end{equation}
+
+compatibility constraints
+\begin{equation}
+    \sum_{w\in W}{u_w^k}\leq 1, \forall k\in K
+\label{scc}
+\end{equation}
+
+\begin{equation}
+    \psi_{i,r-1}^k \cdot x_{jr}^k\leq u_w^k, \forall (i,j)\in D_w, w\in W, r\in R, k\in K
+\label{cc}
+\end{equation}
+
+time
+\begin{equation}
+    \sum_{r\in R}{(
+        \sum_{i\in V}{s_i^k\cdot x_{i,r-1}^k}
+        +\sum_{i,j\in V}{t_{ij}\cdot \psi_{i,r-1}^k\cdot x_{jr}^k}
+        +\epsilon_r^k
+    )}
+    \leq T_f,
+    \forall k\in K
+\label{tm}
+\end{equation}
+
+fulfill demand
+\begin{equation}
+    \sum_{k\in K,r\in R}{c_k\cdot \psi_{i,r-1}^k\cdot x_{jr}^k}\geq q_{ij}, \forall (i,j)\in D
+\label{fd}
+\end{equation}
+
+one by one
+\begin{equation}
+    \begin{split}
+        \sum_{r\in \{1,..,\gamma\}}{(
+            \sum_{i\in V}{s_i^k\cdot x_{i,r-1}^k}
+            +\sum_{i,j\in V}{t_{ij}\cdot \psi_{i,r-1}^k\cdot x_{jr}^k}
+            +\epsilon_r^k
+        )} \geq \\
+        \sum_{i\in V}{g_{i,\gamma}\cdot x_{i,\gamma}^k}-T_m\cdot(1-\sum_{i\in V}{x_{ir}^k}),
+        \forall k\in K,\gamma \in R
+    \end{split}
+\label{1b1}
+\end{equation}
+
+avaliable time
+\begin{equation}
+    \begin{split}
+        &\sum_{i\in V}{g_{i,\gamma+1}\cdot x_{i,\gamma}^k}-T_m\cdot(1-\sum_{i\in V}{x_{ir}^k})\\
+        &\leq \sum_{r\in \{1,..,\gamma\}}{(
+            \sum_{i\in V}{s_i^k\cdot x_{i,r-1}^k}
+            +\sum_{i,j\in V}{t_{ij}\cdot \psi_{i,r-1}^k\cdot x_{jr}^k}
+            +\epsilon_r^k
+        )} + \sum_{i\in V}{s_i^k\cdot x_{i,r}^k}\\
+        &\leq \sum_{i\in V}{g_{i,\gamma+1}\cdot x_{i,\gamma}^k} + T_m\cdot(1-\sum_{i\in V}{x_{ir}^k}),
+        \forall k\in K,\gamma \in R
+    \end{split}
+\label{avlt}
+\end{equation}
+
+\begin{equation}
+    g_{ir}\leq T_m, \forall i\in V,r\in R
+\label{mxms}
+\end{equation}
+
+domain of definition
+\begin{equation}
+    u_k^w,x_{ir}^k\in \{0,1\}, \forall w\in W, i\in V,r\in R,k\in K
+\label{ddb}
+\end{equation}
+
+\begin{equation}
+    \epsilon_r^k,g_{ir},\tau_s^k,T_f\geq 0,\forall i\in V, k\in K,r\in R
+\label{ddc}
+\end{equation}
+
+Add $Y,Z,\Pi$
+\begin{longtable}{cl}% 其中，tabular是表格内容的环境；c表示centering，即文本格式居中；c的个数代表列的个数
+    \caption{Instrumental variables}\label{tab2}\\
+    \toprule [2pt] % 设置线宽
+    variables& definitions \\
+    \midrule [1pt]  
+    $y_{ijr}^k$& $\psi_{i,r-1}^k\cdot x_{jr}^k$ \\
+    $z_{ir}^k$& $g_{ir}\cdot x_{ir}^k$ \\
+    $\pi_{ir}^k$& $g_{i,r+1}\cdot x_{ir}^k$ \\
+    &$\forall i,j\in V, r\in R, k\in K$ \\
+    \bottomrule [2pt]
+\end{longtable}
+
+convert nonlinear to linear
+
+\begin{equation}
+    \begin{split}
+        \begin{cases}
+            & y_{ijr}^k\leq \psi_{i,r-1}^k \\
+            & y_{ijr}^k\leq x_{j,r}^k \\
+            & y_{ijr}^k\geq \psi_{i,r-1}^k+x_{j,r}^k-1
+        \end{cases}, \forall i,j\in V,k\in K,r\in R
+    \end{split}
+    \label{nly}
+\end{equation}
+
+\begin{equation}
+    \begin{split}
+        \begin{cases}
+            & z_{ir}^k\leq T_m\cdot x_{ir}^k \\
+            & z_{ir}^k\leq g_{ir}\\
+            & z_{ir}^k\geq T_m\cdot(x_{ir}^k -1) + g_{ir}
+        \end{cases}, \forall i\in V, r\in R, k\in K
+    \end{split}
+    \label{nlz}
+\end{equation}
+
+\begin{equation}
+    \begin{split}
+        \begin{cases}
+            & \pi_{ir}^k\leq T_m\cdot x_{ir}^k \\
+            & \pi_{ir}^k\leq g_{i,r+1} \\
+            & \pi_{ir}^k\geq T_m\cdot(x_{ir}^k -1) + g_{i,r+1}
+        \end{cases},  \forall i\in V, r\in R, k\in K
+    \end{split}
+    \label{nlpi}
+\end{equation}
+
+single vehicle sequence
+\begin{equation}
+    \psi_{ir}^k=x_{ir}^k+\psi_{i,r-1}^k-\sum_{j\in V}{y_{ijr}^k},\forall i\in V,k\in K,r\in R
+\label{svsy}
+\end{equation}
+
+compatibility constraints
+\begin{equation}
+    y_{ijr}^k\leq u_w^k, \forall (i,j)\in D_w, r\in R, k\in K
+\label{ccy}
+\end{equation}
+
+time
+\begin{equation}
+    \sum_{r\in R}{(
+        \sum_{i\in V}{s_i^k\cdot x_{i,r-1}^k}
+        +\sum_{i,j\in V}{t_{ij}\cdot y_{ijr}^k}
+        +\epsilon_r^k
+    )}
+    \leq T_f,
+    \forall k\in K
+\label{tmy}
+\end{equation}
+
+fulfill demand
+\begin{equation}
+    \sum_{k\in K,r\in R}{c_k\cdot y_{ijr}^k}\geq q_{ij}, \forall (i,j)\in D
+\label{fdy}
+\end{equation}
+
+one by one
+\begin{equation}
+    \begin{split}
+        \sum_{r\in \{1,..,\gamma\}}{(
+            \sum_{i\in V}{s_i^k\cdot x_{i,r-1}^k}
+            +\sum_{i,j\in V}{t_{ij}\cdot y_{ijr}^k}
+            +\epsilon_r^k
+        )} \geq \\
+        \sum_{i\in V}{z_{ir}^k}+T_m\cdot(1-\sum_{i\in V}{x_{ir}^k}),
+        \forall k\in K,\gamma \in R
+    \end{split}
+\label{1b1y}
+\end{equation}
+
+avaliable time
+\begin{equation}
+    \begin{split}
+        &\sum_{i\in V}{\pi_{ir}^k}-T_m\cdot(1-\sum_{i\in V}{x_{ir}^k})\\
+        &\leq \sum_{r\in \{1,..,\gamma\}}{(
+            \sum_{i\in V}{s_i^k\cdot x_{i,r-1}^k}
+            +\sum_{i,j\in V}{t_{ij}\cdot y_{ijr}^k}
+            +\epsilon_r^k
+        )}  + \sum_{i\in V}{s_i^k\cdot x_{i,r}^k}\\
+        &\leq \sum_{i\in V}{\pi_{ir}^k}+T_m\cdot(1-\sum_{i\in V}{x_{ir}^k}),
+        \forall k\in K,\gamma \in R
+    \end{split}
+\label{avltyz}
+\end{equation}
+
+domain of definition
+\begin{equation}
+    y_{ijr}^k\in \{0,1\}, \forall i,j\in V,r\in R,k\in K
+\label{ddy}
+\end{equation}
+
+\begin{equation}
+    z_{ir}^k,\pi_{ir}^k\geq 0, \forall i\in V,r\in R,k\in K
+\label{ddz}
+\end{equation}
+
+
+\section{XXXX Algorithm}
+
+Heuristic Benders algorithm
+
+master-problem (MP):
+$U,X,\Psi,Y$
+\begin{equation}
+    \min 0+\overline{T_f}
+\label{mobj}
+\end{equation}
+
+s.t. (\ref{od}), (\ref{dpt}), (\ref{so}), (\ref{zeroafter}), (\ref{nly}), 
+(\ref{svsy}), (\ref{scc}), (\ref{ccy}), (\ref{fdy}) and cuts from sub-problem.
+
+There is no objection in master-problem, just find the feasible solution.
+
+sub-problem (SP):
+$E,G,T_f,Z,\Pi$
+\begin{equation}
+    \min T_f
+\label{sobj}
+\end{equation}
+
+s.t. (\ref{god}), (\ref{eod}), (\ref{nlz}), (\ref{nlpi}), (\ref{tmy}), (\ref{fdy}), (\ref{1b1y}), (\ref{avltyz})
+
+\section{Computational analysis}
+
+\section{Conclusion and future extensions}
+
+%% The Appendices part is started with the command \appendix;
+%% appendix sections are then done as normal sections
+%% \appendix
+
+%% \section{}
+%% \label{}
+
+%% If you have bibdatabase file and want bibtex to generate the
+%% bibitems, please use
+%%
+%%  \bibliographystyle{elsarticle-harv} 
+%%  \bibliography{<your bibdatabase>}
+
+%% else use the following coding to input the bibitems directly in the
+%% TeX file.
+
+\begin{thebibliography}{00}
+
+%% \bibitem[Author(year)]{label}
+%% Text of bibliographic item
+
+\bibitem[ ()]{}
+
+\end{thebibliography}
+\end{document}
+
+\endinput
+%%
+%% End of file `elsarticle-template-harv.tex'.

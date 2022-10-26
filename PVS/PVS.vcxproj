@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{8416ff68-423b-4d1e-b9c1-724cb97bb35f}</ProjectGuid>
+    <RootNamespace>PVS</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\gurobi951\win64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\gurobi951\win64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>gurobi95.lib;gurobi_c++mdd2019.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="BaseModel.cpp" />
+    <ClCompile Include="BendersCut.cpp" />
+    <ClCompile Include="HFunRace.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MasterProblem.cpp" />
+    <ClCompile Include="ModelData.cpp" />
+    <ClCompile Include="SubProblem.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BaseModel.h" />
+    <ClInclude Include="BendersCut.h" />
+    <ClInclude Include="headfiles.h" />
+    <ClInclude Include="HFunRace.h" />
+    <ClInclude Include="MasterProblem.h" />
+    <ClInclude Include="ModelData.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="SubProblem.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="PVS.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="pdptwdata\lc101.txt" />
+    <Text Include="pdptwdata\lc101cutoff.txt" />
+    <Text Include="pdptwdata\lc102.txt" />
+    <Text Include="pdptwdata\lc103.txt" />
+    <Text Include="pdptwdata\lc104.txt" />
+    <Text Include="pdptwdata\lc105.txt" />
+    <Text Include="pdptwdata\lc106.txt" />
+    <Text Include="pdptwdata\lc107.txt" />
+    <Text Include="pdptwdata\lc108.txt" />
+    <Text Include="pdptwdata\lc109.txt" />
+    <Text Include="pdptwdata\LC1_10_1.txt" />
+    <Text Include="pdptwdata\LC1_10_10.txt" />
+    <Text Include="pdptwdata\LC1_10_2.txt" />
+    <Text Include="pdptwdata\LC1_10_3.txt" />
+    <Text Include="pdptwdata\LC1_10_4.txt" />
+    <Text Include="pdptwdata\LC1_10_5.txt" />
+    <Text Include="pdptwdata\LC1_10_6.txt" />
+    <Text Include="pdptwdata\LC1_10_7.txt" />
+    <Text Include="pdptwdata\LC1_10_8.txt" />
+    <Text Include="pdptwdata\LC1_10_9.txt" />
+    <Text Include="pdptwdata\LC1_2_1.txt" />
+    <Text Include="pdptwdata\LC1_2_10.txt" />
+    <Text Include="pdptwdata\LC1_2_2.txt" />
+    <Text Include="pdptwdata\LC1_2_3.txt" />
+    <Text Include="pdptwdata\LC1_2_4.txt" />
+    <Text Include="pdptwdata\LC1_2_5.txt" />
+    <Text Include="pdptwdata\LC1_2_6.txt" />
+    <Text Include="pdptwdata\LC1_2_7.txt" />
+    <Text Include="pdptwdata\LC1_2_8.txt" />
+    <Text Include="pdptwdata\LC1_2_9.txt" />
+    <Text Include="pdptwdata\LC1_4_1.txt" />
+    <Text Include="pdptwdata\LC1_4_10.txt" />
+    <Text Include="pdptwdata\LC1_4_2.txt" />
+    <Text Include="pdptwdata\LC1_4_3.txt" />
+    <Text Include="pdptwdata\LC1_4_4.txt" />
+    <Text Include="pdptwdata\LC1_4_5.txt" />
+    <Text Include="pdptwdata\LC1_4_6.txt" />
+    <Text Include="pdptwdata\LC1_4_7.txt" />
+    <Text Include="pdptwdata\LC1_4_8.txt" />
+    <Text Include="pdptwdata\LC1_4_9.txt" />
+    <Text Include="pdptwdata\LC1_6_1.txt" />
+    <Text Include="pdptwdata\LC1_6_10.txt" />
+    <Text Include="pdptwdata\LC1_6_2.txt" />
+    <Text Include="pdptwdata\LC1_6_3.txt" />
+    <Text Include="pdptwdata\LC1_6_4.txt" />
+    <Text Include="pdptwdata\LC1_6_5.txt" />
+    <Text Include="pdptwdata\LC1_6_6.txt" />
+    <Text Include="pdptwdata\LC1_6_7.txt" />
+    <Text Include="pdptwdata\LC1_6_8.txt" />
+    <Text Include="pdptwdata\LC1_6_9.txt" />
+    <Text Include="pdptwdata\LC1_8_1.txt" />
+    <Text Include="pdptwdata\LC1_8_10.txt" />
+    <Text Include="pdptwdata\LC1_8_2.txt" />
+    <Text Include="pdptwdata\LC1_8_3.txt" />
+    <Text Include="pdptwdata\LC1_8_4.txt" />
+    <Text Include="pdptwdata\LC1_8_5.txt" />
+    <Text Include="pdptwdata\LC1_8_6.txt" />
+    <Text Include="pdptwdata\LC1_8_7.txt" />
+    <Text Include="pdptwdata\LC1_8_8.txt" />
+    <Text Include="pdptwdata\LC1_8_9.txt" />
+    <Text Include="pdptwdata\lc201.txt" />
+    <Text Include="pdptwdata\lc202.txt" />
+    <Text Include="pdptwdata\lc203.txt" />
+    <Text Include="pdptwdata\lc204.txt" />
+    <Text Include="pdptwdata\lc205.txt" />
+    <Text Include="pdptwdata\lc206.txt" />
+    <Text Include="pdptwdata\lc207.txt" />
+    <Text Include="pdptwdata\lc208.txt" />
+    <Text Include="pdptwdata\LC2_10_1.txt" />
+    <Text Include="pdptwdata\LC2_10_10.txt" />
+    <Text Include="pdptwdata\LC2_10_2.txt" />
+    <Text Include="pdptwdata\LC2_10_3.txt" />
+    <Text Include="pdptwdata\LC2_10_4.txt" />
+    <Text Include="pdptwdata\LC2_10_5.txt" />
+    <Text Include="pdptwdata\LC2_10_6.txt" />
+    <Text Include="pdptwdata\LC2_10_7.txt" />
+    <Text Include="pdptwdata\LC2_10_8.txt" />
+    <Text Include="pdptwdata\LC2_10_9.txt" />
+    <Text Include="pdptwdata\LC2_2_1.txt" />
+    <Text Include="pdptwdata\LC2_2_10.txt" />
+    <Text Include="pdptwdata\LC2_2_2.txt" />
+    <Text Include="pdptwdata\LC2_2_3.txt" />
+    <Text Include="pdptwdata\LC2_2_4.txt" />
+    <Text Include="pdptwdata\LC2_2_5.txt" />
+    <Text Include="pdptwdata\LC2_2_6.txt" />
+    <Text Include="pdptwdata\LC2_2_7.txt" />
+    <Text Include="pdptwdata\LC2_2_8.txt" />
+    <Text Include="pdptwdata\LC2_2_9.txt" />
+    <Text Include="pdptwdata\LC2_4_1.txt" />
+    <Text Include="pdptwdata\LC2_4_10.txt" />
+    <Text Include="pdptwdata\LC2_4_2.txt" />
+    <Text Include="pdptwdata\LC2_4_3.txt" />
+    <Text Include="pdptwdata\LC2_4_4.txt" />
+    <Text Include="pdptwdata\LC2_4_5.txt" />
+    <Text Include="pdptwdata\LC2_4_6.txt" />
+    <Text Include="pdptwdata\LC2_4_7.txt" />
+    <Text Include="pdptwdata\LC2_4_8.txt" />
+    <Text Include="pdptwdata\LC2_4_9.txt" />
+    <Text Include="pdptwdata\LC2_6_1.txt" />
+    <Text Include="pdptwdata\LC2_6_10.txt" />
+    <Text Include="pdptwdata\LC2_6_2.txt" />
+    <Text Include="pdptwdata\LC2_6_3.txt" />
+    <Text Include="pdptwdata\LC2_6_4.txt" />
+    <Text Include="pdptwdata\LC2_6_5.txt" />
+    <Text Include="pdptwdata\LC2_6_6.txt" />
+    <Text Include="pdptwdata\LC2_6_7.txt" />
+    <Text Include="pdptwdata\LC2_6_8.txt" />
+    <Text Include="pdptwdata\LC2_6_9.txt" />
+    <Text Include="pdptwdata\LC2_8_1.txt" />
+    <Text Include="pdptwdata\LC2_8_10.txt" />
+    <Text Include="pdptwdata\LC2_8_2.txt" />
+    <Text Include="pdptwdata\LC2_8_3.txt" />
+    <Text Include="pdptwdata\LC2_8_4.txt" />
+    <Text Include="pdptwdata\LC2_8_5.txt" />
+    <Text Include="pdptwdata\LC2_8_6.txt" />
+    <Text Include="pdptwdata\LC2_8_7.txt" />
+    <Text Include="pdptwdata\LC2_8_8.txt" />
+    <Text Include="pdptwdata\LC2_8_9.txt" />
+    <Text Include="pdptwdata\lr101.txt" />
+    <Text Include="pdptwdata\lr102.txt" />
+    <Text Include="pdptwdata\lr103.txt" />
+    <Text Include="pdptwdata\lr104.txt" />
+    <Text Include="pdptwdata\lr105.txt" />
+    <Text Include="pdptwdata\lr106.txt" />
+    <Text Include="pdptwdata\lr107.txt" />
+    <Text Include="pdptwdata\lr108.txt" />
+    <Text Include="pdptwdata\lr109.txt" />
+    <Text Include="pdptwdata\lr110.txt" />
+    <Text Include="pdptwdata\lr111.txt" />
+    <Text Include="pdptwdata\lr112.txt" />
+    <Text Include="pdptwdata\LR1_10_1.txt" />
+    <Text Include="pdptwdata\LR1_10_10.txt" />
+    <Text Include="pdptwdata\LR1_10_2.txt" />
+    <Text Include="pdptwdata\LR1_10_3.txt" />
+    <Text Include="pdptwdata\LR1_10_4.txt" />
+    <Text Include="pdptwdata\LR1_10_5.txt" />
+    <Text Include="pdptwdata\LR1_10_6.txt" />
+    <Text Include="pdptwdata\LR1_10_7.txt" />
+    <Text Include="pdptwdata\LR1_10_8.txt" />
+    <Text Include="pdptwdata\LR1_10_9.txt" />
+    <Text Include="pdptwdata\LR1_2_1.txt" />
+    <Text Include="pdptwdata\LR1_2_10.txt" />
+    <Text Include="pdptwdata\LR1_2_2.txt" />
+    <Text Include="pdptwdata\LR1_2_3.txt" />
+    <Text Include="pdptwdata\LR1_2_4.txt" />
+    <Text Include="pdptwdata\LR1_2_5.txt" />
+    <Text Include="pdptwdata\LR1_2_6.txt" />
+    <Text Include="pdptwdata\LR1_2_7.txt" />
+    <Text Include="pdptwdata\LR1_2_8.txt" />
+    <Text Include="pdptwdata\LR1_2_9.txt" />
+    <Text Include="pdptwdata\LR1_4_1.txt" />
+    <Text Include="pdptwdata\LR1_4_10.txt" />
+    <Text Include="pdptwdata\LR1_4_2.txt" />
+    <Text Include="pdptwdata\LR1_4_3.txt" />
+    <Text Include="pdptwdata\LR1_4_4.txt" />
+    <Text Include="pdptwdata\LR1_4_5.txt" />
+    <Text Include="pdptwdata\LR1_4_6.txt" />
+    <Text Include="pdptwdata\LR1_4_7.txt" />
+    <Text Include="pdptwdata\LR1_4_8.txt" />
+    <Text Include="pdptwdata\LR1_4_9.txt" />
+    <Text Include="pdptwdata\LR1_6_1.txt" />
+    <Text Include="pdptwdata\LR1_6_10.txt" />
+    <Text Include="pdptwdata\LR1_6_2.txt" />
+    <Text Include="pdptwdata\LR1_6_3.txt" />
+    <Text Include="pdptwdata\LR1_6_4.txt" />
+    <Text Include="pdptwdata\LR1_6_5.txt" />
+    <Text Include="pdptwdata\LR1_6_6.txt" />
+    <Text Include="pdptwdata\LR1_6_7.txt" />
+    <Text Include="pdptwdata\LR1_6_8.txt" />
+    <Text Include="pdptwdata\LR1_6_9.txt" />
+    <Text Include="pdptwdata\LR1_8_1.txt" />
+    <Text Include="pdptwdata\LR1_8_10.txt" />
+    <Text Include="pdptwdata\LR1_8_2.txt" />
+    <Text Include="pdptwdata\LR1_8_3.txt" />
+    <Text Include="pdptwdata\LR1_8_4.txt" />
+    <Text Include="pdptwdata\LR1_8_5.txt" />
+    <Text Include="pdptwdata\LR1_8_6.txt" />
+    <Text Include="pdptwdata\LR1_8_7.txt" />
+    <Text Include="pdptwdata\LR1_8_8.txt" />
+    <Text Include="pdptwdata\LR1_8_9.txt" />
+    <Text Include="pdptwdata\lr201.txt" />
+    <Text Include="pdptwdata\lr202.txt" />
+    <Text Include="pdptwdata\lr203.txt" />
+    <Text Include="pdptwdata\lr204.txt" />
+    <Text Include="pdptwdata\lr205.txt" />
+    <Text Include="pdptwdata\lr206.txt" />
+    <Text Include="pdptwdata\lr207.txt" />
+    <Text Include="pdptwdata\lr208.txt" />
+    <Text Include="pdptwdata\lr209.txt" />
+    <Text Include="pdptwdata\lr210.txt" />
+    <Text Include="pdptwdata\lr211.txt" />
+    <Text Include="pdptwdata\LR2_10_1.txt" />
+    <Text Include="pdptwdata\LR2_10_10.txt" />
+    <Text Include="pdptwdata\LR2_10_2.txt" />
+    <Text Include="pdptwdata\LR2_10_3.txt" />
+    <Text Include="pdptwdata\LR2_10_4.txt" />
+    <Text Include="pdptwdata\LR2_10_5.txt" />
+    <Text Include="pdptwdata\LR2_10_6.txt" />
+    <Text Include="pdptwdata\LR2_10_7.txt" />
+    <Text Include="pdptwdata\LR2_10_8.txt" />
+    <Text Include="pdptwdata\LR2_10_9.txt" />
+    <Text Include="pdptwdata\LR2_2_1.txt" />
+    <Text Include="pdptwdata\LR2_2_10.txt" />
+    <Text Include="pdptwdata\LR2_2_2.txt" />
+    <Text Include="pdptwdata\LR2_2_3.txt" />
+    <Text Include="pdptwdata\LR2_2_4.txt" />
+    <Text Include="pdptwdata\LR2_2_5.txt" />
+    <Text Include="pdptwdata\LR2_2_6.txt" />
+    <Text Include="pdptwdata\LR2_2_7.txt" />
+    <Text Include="pdptwdata\LR2_2_8.txt" />
+    <Text Include="pdptwdata\LR2_2_9.txt" />
+    <Text Include="pdptwdata\LR2_4_1.txt" />
+    <Text Include="pdptwdata\LR2_4_10.txt" />
+    <Text Include="pdptwdata\LR2_4_2.txt" />
+    <Text Include="pdptwdata\LR2_4_3.txt" />
+    <Text Include="pdptwdata\LR2_4_4.txt" />
+    <Text Include="pdptwdata\LR2_4_5.txt" />
+    <Text Include="pdptwdata\LR2_4_6.txt" />
+    <Text Include="pdptwdata\LR2_4_7.txt" />
+    <Text Include="pdptwdata\LR2_4_8.txt" />
+    <Text Include="pdptwdata\LR2_4_9.txt" />
+    <Text Include="pdptwdata\LR2_6_1.txt" />
+    <Text Include="pdptwdata\LR2_6_10.txt" />
+    <Text Include="pdptwdata\LR2_6_2.txt" />
+    <Text Include="pdptwdata\LR2_6_3.txt" />
+    <Text Include="pdptwdata\LR2_6_4.txt" />
+    <Text Include="pdptwdata\LR2_6_5.txt" />
+    <Text Include="pdptwdata\LR2_6_6.txt" />
+    <Text Include="pdptwdata\LR2_6_7.txt" />
+    <Text Include="pdptwdata\LR2_6_8.txt" />
+    <Text Include="pdptwdata\LR2_6_9.txt" />
+    <Text Include="pdptwdata\LR2_8_1.txt" />
+    <Text Include="pdptwdata\LR2_8_10.txt" />
+    <Text Include="pdptwdata\LR2_8_2.txt" />
+    <Text Include="pdptwdata\LR2_8_3.txt" />
+    <Text Include="pdptwdata\LR2_8_4.txt" />
+    <Text Include="pdptwdata\LR2_8_5.txt" />
+    <Text Include="pdptwdata\LR2_8_6.txt" />
+    <Text Include="pdptwdata\LR2_8_7.txt" />
+    <Text Include="pdptwdata\LR2_8_8.txt" />
+    <Text Include="pdptwdata\LR2_8_9.txt" />
+    <Text Include="pdptwdata\lrc101.txt" />
+    <Text Include="pdptwdata\lrc102.txt" />
+    <Text Include="pdptwdata\lrc103.txt" />
+    <Text Include="pdptwdata\lrc104.txt" />
+    <Text Include="pdptwdata\lrc105.txt" />
+    <Text Include="pdptwdata\lrc106.txt" />
+    <Text Include="pdptwdata\lrc107.txt" />
+    <Text Include="pdptwdata\lrc108.txt" />
+    <Text Include="pdptwdata\LRC1_10_1.txt" />
+    <Text Include="pdptwdata\LRC1_10_10.txt" />
+    <Text Include="pdptwdata\LRC1_10_2.txt" />
+    <Text Include="pdptwdata\LRC1_10_3.txt" />
+    <Text Include="pdptwdata\LRC1_10_4.txt" />
+    <Text Include="pdptwdata\LRC1_10_5.txt" />
+    <Text Include="pdptwdata\LRC1_10_6.txt" />
+    <Text Include="pdptwdata\LRC1_10_7.txt" />
+    <Text Include="pdptwdata\LRC1_10_8.txt" />
+    <Text Include="pdptwdata\LRC1_10_9.txt" />
+    <Text Include="pdptwdata\LRC1_2_1.txt" />
+    <Text Include="pdptwdata\LRC1_2_10.txt" />
+    <Text Include="pdptwdata\LRC1_2_2.txt" />
+    <Text Include="pdptwdata\LRC1_2_3.txt" />
+    <Text Include="pdptwdata\LRC1_2_4.txt" />
+    <Text Include="pdptwdata\LRC1_2_5.txt" />
+    <Text Include="pdptwdata\LRC1_2_6.txt" />
+    <Text Include="pdptwdata\LRC1_2_7.txt" />
+    <Text Include="pdptwdata\LRC1_2_8.txt" />
+    <Text Include="pdptwdata\LRC1_2_9.txt" />
+    <Text Include="pdptwdata\LRC1_4_1.txt" />
+    <Text Include="pdptwdata\LRC1_4_10.txt" />
+    <Text Include="pdptwdata\LRC1_4_2.txt" />
+    <Text Include="pdptwdata\LRC1_4_3.txt" />
+    <Text Include="pdptwdata\LRC1_4_4.txt" />
+    <Text Include="pdptwdata\LRC1_4_5.txt" />
+    <Text Include="pdptwdata\LRC1_4_6.txt" />
+    <Text Include="pdptwdata\LRC1_4_7.txt" />
+    <Text Include="pdptwdata\LRC1_4_8.txt" />
+    <Text Include="pdptwdata\LRC1_4_9.txt" />
+    <Text Include="pdptwdata\LRC1_6_1.txt" />
+    <Text Include="pdptwdata\LRC1_6_10.txt" />
+    <Text Include="pdptwdata\LRC1_6_2.txt" />
+    <Text Include="pdptwdata\LRC1_6_3.txt" />
+    <Text Include="pdptwdata\LRC1_6_4.txt" />
+    <Text Include="pdptwdata\LRC1_6_5.txt" />
+    <Text Include="pdptwdata\LRC1_6_6.txt" />
+    <Text Include="pdptwdata\LRC1_6_7.txt" />
+    <Text Include="pdptwdata\LRC1_6_8.txt" />
+    <Text Include="pdptwdata\LRC1_6_9.txt" />
+    <Text Include="pdptwdata\LRC1_8_1.txt" />
+    <Text Include="pdptwdata\LRC1_8_10.txt" />
+    <Text Include="pdptwdata\LRC1_8_2.txt" />
+    <Text Include="pdptwdata\LRC1_8_3.txt" />
+    <Text Include="pdptwdata\LRC1_8_4.txt" />
+    <Text Include="pdptwdata\LRC1_8_5.txt" />
+    <Text Include="pdptwdata\LRC1_8_6.txt" />
+    <Text Include="pdptwdata\LRC1_8_7.txt" />
+    <Text Include="pdptwdata\LRC1_8_8.txt" />
+    <Text Include="pdptwdata\LRC1_8_9.txt" />
+    <Text Include="pdptwdata\lrc201.txt" />
+    <Text Include="pdptwdata\lrc202.txt" />
+    <Text Include="pdptwdata\lrc203.txt" />
+    <Text Include="pdptwdata\lrc204.txt" />
+    <Text Include="pdptwdata\lrc205.txt" />
+    <Text Include="pdptwdata\lrc206.txt" />
+    <Text Include="pdptwdata\lrc207.txt" />
+    <Text Include="pdptwdata\lrc208.txt" />
+    <Text Include="pdptwdata\LRC2_10_1.txt" />
+    <Text Include="pdptwdata\LRC2_10_10.txt" />
+    <Text Include="pdptwdata\LRC2_10_2.txt" />
+    <Text Include="pdptwdata\LRC2_10_3.txt" />
+    <Text Include="pdptwdata\LRC2_10_4.txt" />
+    <Text Include="pdptwdata\LRC2_10_5.txt" />
+    <Text Include="pdptwdata\LRC2_10_6.txt" />
+    <Text Include="pdptwdata\LRC2_10_7.txt" />
+    <Text Include="pdptwdata\LRC2_2_1.txt" />
+    <Text Include="pdptwdata\LRC2_2_10.txt" />
+    <Text Include="pdptwdata\LRC2_2_2.txt" />
+    <Text Include="pdptwdata\LRC2_2_3.txt" />
+    <Text Include="pdptwdata\LRC2_2_4.txt" />
+    <Text Include="pdptwdata\LRC2_2_5.txt" />
+    <Text Include="pdptwdata\LRC2_2_6.txt" />
+    <Text Include="pdptwdata\LRC2_2_7.txt" />
+    <Text Include="pdptwdata\LRC2_2_8.txt" />
+    <Text Include="pdptwdata\LRC2_2_9.txt" />
+    <Text Include="pdptwdata\LRC2_4_1.txt" />
+    <Text Include="pdptwdata\LRC2_4_10.txt" />
+    <Text Include="pdptwdata\LRC2_4_2.txt" />
+    <Text Include="pdptwdata\LRC2_4_3.txt" />
+    <Text Include="pdptwdata\LRC2_4_4.txt" />
+    <Text Include="pdptwdata\LRC2_4_5.txt" />
+    <Text Include="pdptwdata\LRC2_4_6.txt" />
+    <Text Include="pdptwdata\LRC2_4_7.txt" />
+    <Text Include="pdptwdata\LRC2_4_8.txt" />
+    <Text Include="pdptwdata\LRC2_4_9.txt" />
+    <Text Include="pdptwdata\LRC2_6_1.txt" />
+    <Text Include="pdptwdata\LRC2_6_10.txt" />
+    <Text Include="pdptwdata\LRC2_6_2.txt" />
+    <Text Include="pdptwdata\LRC2_6_3.txt" />
+    <Text Include="pdptwdata\LRC2_6_4.txt" />
+    <Text Include="pdptwdata\LRC2_6_5.txt" />
+    <Text Include="pdptwdata\LRC2_6_6.txt" />
+    <Text Include="pdptwdata\LRC2_6_7.txt" />
+    <Text Include="pdptwdata\LRC2_6_8.txt" />
+    <Text Include="pdptwdata\LRC2_6_9.txt" />
+    <Text Include="pdptwdata\LRC2_8_1.txt" />
+    <Text Include="pdptwdata\LRC2_8_10.txt" />
+    <Text Include="pdptwdata\LRC2_8_2.txt" />
+    <Text Include="pdptwdata\LRC2_8_3.txt" />
+    <Text Include="pdptwdata\LRC2_8_4.txt" />
+    <Text Include="pdptwdata\LRC2_8_5.txt" />
+    <Text Include="pdptwdata\LRC2_8_6.txt" />
+    <Text Include="pdptwdata\LRC2_8_7.txt" />
+    <Text Include="pdptwdata\LRC2_8_8.txt" />
+    <Text Include="pdptwdata\LRC2_8_9.txt" />
+    <Text Include="pdptwdata\test10.txt" />
+    <Text Include="tinydemo.txt" />
+    <Text Include="tinydemo6.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

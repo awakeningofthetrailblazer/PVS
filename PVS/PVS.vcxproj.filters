@@ -1,0 +1,1147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelData.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseModel.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="HFunRace.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MasterProblem.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SubProblem.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="BendersCut.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ModelData.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseModel.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="headfiles.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="HFunRace.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MasterProblem.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SubProblem.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BendersCut.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="PVS.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="pdptwdata\LC1_2_1.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_2_2.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_2_3.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_2_4.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_2_5.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_2_6.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_2_7.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_2_8.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_2_9.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_2_10.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_4_1.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_4_2.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_4_3.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_4_4.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_4_5.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_4_6.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_4_7.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_4_8.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_4_9.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_4_10.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_6_1.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_6_2.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_6_3.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_6_4.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_6_5.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_6_6.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_6_7.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_6_8.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_6_9.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_6_10.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_8_1.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_8_2.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_8_3.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_8_4.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_8_5.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_8_6.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_8_7.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_8_8.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_8_9.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_8_10.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_10_1.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_10_2.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_10_3.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_10_4.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_10_5.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_10_6.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_10_7.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_10_8.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_10_9.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC1_10_10.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_2_1.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_2_2.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_2_3.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_2_4.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_2_5.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_2_6.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_2_7.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_2_8.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_2_9.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_2_10.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_4_1.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_4_2.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_4_3.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_4_4.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_4_5.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_4_6.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_4_7.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_4_8.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_4_9.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_4_10.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_6_1.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_6_2.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_6_3.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_6_4.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_6_5.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_6_6.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_6_7.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_6_8.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_6_9.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_6_10.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_8_1.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_8_2.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_8_3.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_8_4.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_8_5.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_8_6.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_8_7.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_8_8.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_8_9.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_8_10.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_10_1.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_10_2.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_10_3.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_10_4.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_10_5.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_10_6.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_10_7.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_10_8.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_10_9.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LC2_10_10.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lc101.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lc102.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lc103.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lc104.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lc105.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lc106.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lc107.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lc108.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lc109.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lc201.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lc202.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lc203.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lc204.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lc205.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lc206.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lc207.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lc208.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_2_1.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_2_2.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_2_3.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_2_4.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_2_5.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_2_6.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_2_7.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_2_8.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_2_9.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_2_10.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_4_1.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_4_2.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_4_3.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_4_4.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_4_5.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_4_6.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_4_7.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_4_8.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_4_9.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_4_10.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_6_1.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_6_2.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_6_3.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_6_4.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_6_5.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_6_6.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_6_7.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_6_8.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_6_9.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_6_10.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_8_1.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_8_2.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_8_3.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_8_4.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_8_5.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_8_6.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_8_7.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_8_8.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_8_9.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_8_10.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_10_1.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_10_2.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_10_3.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_10_4.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_10_5.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_10_6.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_10_7.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_10_8.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_10_9.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR1_10_10.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_2_1.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_2_2.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_2_3.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_2_4.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_2_5.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_2_6.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_2_7.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_2_8.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_2_9.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_2_10.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_4_1.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_4_2.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_4_3.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_4_4.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_4_5.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_4_6.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_4_7.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_4_8.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_4_9.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_4_10.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_6_1.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_6_2.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_6_3.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_6_4.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_6_5.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_6_6.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_6_7.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_6_8.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_6_9.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_6_10.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_8_1.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_8_2.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_8_3.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_8_4.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_8_5.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_8_6.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_8_7.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_8_8.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_8_9.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_8_10.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_10_1.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_10_2.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_10_3.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_10_4.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_10_5.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_10_6.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_10_7.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_10_8.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_10_9.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LR2_10_10.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lr101.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lr102.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lr103.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lr104.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lr105.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lr106.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lr107.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lr108.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lr109.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lr110.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lr111.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lr112.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lr201.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lr202.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lr203.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lr204.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lr205.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lr206.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lr207.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lr208.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lr209.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lr210.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lr211.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_2_1.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_2_2.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_2_3.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_2_4.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_2_5.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_2_6.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_2_7.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_2_8.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_2_9.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_2_10.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_4_1.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_4_2.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_4_3.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_4_4.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_4_5.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_4_6.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_4_7.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_4_8.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_4_9.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_4_10.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_6_1.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_6_2.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_6_3.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_6_4.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_6_5.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_6_6.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_6_7.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_6_8.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_6_9.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_6_10.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_8_1.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_8_2.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_8_3.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_8_4.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_8_5.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_8_6.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_8_7.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_8_8.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_8_9.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_8_10.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_10_1.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_10_2.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_10_3.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_10_4.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_10_5.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_10_6.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_10_7.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_10_8.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_10_9.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC1_10_10.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_2_1.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_2_2.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_2_3.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_2_4.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_2_5.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_2_6.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_2_7.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_2_8.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_2_9.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_2_10.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_4_1.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_4_2.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_4_3.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_4_4.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_4_5.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_4_6.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_4_7.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_4_8.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_4_9.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_4_10.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_6_1.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_6_2.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_6_3.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_6_4.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_6_5.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_6_6.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_6_7.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_6_8.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_6_9.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_6_10.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_8_1.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_8_2.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_8_3.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_8_4.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_8_5.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_8_6.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_8_7.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_8_8.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_8_9.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_8_10.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_10_1.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_10_2.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_10_3.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_10_4.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_10_5.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_10_6.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_10_7.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\LRC2_10_10.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lrc101.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lrc102.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lrc103.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lrc104.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lrc105.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lrc106.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lrc107.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lrc108.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lrc201.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lrc202.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lrc203.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lrc204.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lrc205.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lrc206.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lrc207.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lrc208.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="tinydemo.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\test10.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="tinydemo6.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="pdptwdata\lc101cutoff.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

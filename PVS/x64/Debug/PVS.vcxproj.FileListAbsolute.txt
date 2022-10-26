@@ -1,0 +1,2 @@
+D:\AWKTB2022\UMS\PVS\x64\Debug\PVS.exe
+D:\UMS\PVS\x64\Debug\PVS.exe
