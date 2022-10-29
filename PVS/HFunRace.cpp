@@ -1,8 +1,7 @@
 #include"HFunRace.h"
 
-HFunRace::HFunRace(ModelData& gmd) {
+HFunRace::HFunRace(ModelData& gmd):md(&gmd) {
 	cout << "activate H function race..." << endl;
-	md = &gmd;
 }
 
 HFunRace::~HFunRace() {
@@ -39,7 +38,7 @@ void HFunRace::iniSolutionGen(unordered_map<int, unordered_map<int,
 	int cnt = 0, cnt2 = 0;
 	unordered_map<int, string> vehicle_worktype;
 	for (auto k : md->vehicle_set) {
-		if (double(cnt) / md->vehicle_set.size() < demand_cut_rate[cnt2+1]) {
+		if (double(cnt) / md->vehicle_set.size() <= demand_cut_rate[cnt2+1]) {
 			vehicle_worktype[k] = type_list[cnt2];
 		}
 		else {
@@ -81,6 +80,7 @@ void HFunRace::iniSolutionGen(unordered_map<int, unordered_map<int,
 				totdemand += demand_to_assign[w.first][d[0]][d[1]];
 			}
 		}
+		cout << "totdemand" << totdemand << endl;
 	} while (totdemand>0);
 
 	for (auto k : md->vehicle_set) {

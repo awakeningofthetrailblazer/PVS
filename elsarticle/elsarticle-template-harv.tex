@@ -165,6 +165,42 @@ Various exact or heuristic algorithms are developed to solve different types of 
 
 \subsection{Unrelated and uniform parallel machine scheduling}
 
+Machine scheduling problems.
+
+In many cases, jobs/tasks must be assigned to machines/agents.
+
+As an example, consider a factory producing one product for $n$ customers. 
+
+Serial production: Only one job can be processed at one time.
+Each job has its due date.
+How to schedule the n jobes to minimizie the total number of delay jobs?
+
+In this example, scheduling is nothing but sequencing.
+
+Splitting jobs is not helpful.
+There are $n!$ ways to formulate this problem 
+(so that a solution may be obtained by solving the model)?
+
+The problems of scheduling jobs/tasks to 
+machines/agents are machine scheduling problems.
+
+Machine scheduling problems may be categorized in multiple ways. 
+By production mode, 
+single machine serial production, 
+multiple parallel machines, 
+flow shop problems,
+job shop problems.
+By job splitting,
+non-preemptive and preemptive problems.
+By performance measurement, 
+makespan (the time that all jobs are complete),
+(weighted) total completion time,
+(weighted) number of delayed jobs,
+(weighted) total lateness,
+(weighted) total tardiness,
+and more.
+
+
 As another famous optimization problem, Machine Scheduling (MS) 
 is widely applied in manufacturing, logistics.
 
@@ -244,7 +280,7 @@ orgin and destination
 
 single occupied
 \begin{equation}
-    \sum_{i\in V,k\in K}{x_{ir}^k}\leq 1, \forall r\in R
+    \sum_{i\in V,k\in K}{x_{ir}^k}\leq \sum_{i\in V,k\in K}{\psi_{ir}^k}= 1, \forall r\in R
 \label{so}
 \end{equation}
 
@@ -269,7 +305,7 @@ single vehicle sequence
 \end{equation}
 \begin{equation}
     \begin{split}
-        -T_m\cdot \sum_{i\in V}{x_{ir}^k} \leq \epsilon_r^k \leq T_m\cdot \sum_{i\in V}{x_{ir}^k},
+        \epsilon_r^k \leq T_m\cdot \sum_{i\in V}{x_{ir}^k},
         \forall r\in R,k\in K
     \end{split}
 \label{eod}
@@ -492,6 +528,17 @@ $E,G,T_f,Z,\Pi$
 \end{equation}
 
 s.t. (\ref{god}), (\ref{eod}), (\ref{nlz}), (\ref{nlpi}), (\ref{tmy}), (\ref{fdy}), (\ref{1b1y}), (\ref{avltyz})
+
+
+try something
+\begin{equation}
+    \max_k \{A_k+B_k+C_k\} \leq 
+    \min \{ 
+        \max_k \{A_k+B_k\}+\max_k \{C_k\},
+        \max_k \{A_k\}+\max_k \{B_k+C_k\}
+    \}
+\label{sobj}
+\end{equation}
 
 \section{Computational analysis}
 

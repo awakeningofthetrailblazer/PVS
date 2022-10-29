@@ -136,6 +136,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MasterProblem.cpp" />
     <ClCompile Include="ModelData.cpp" />
+    <ClCompile Include="RawModel.cpp" />
     <ClCompile Include="SubProblem.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -145,6 +146,7 @@
     <ClInclude Include="HFunRace.h" />
     <ClInclude Include="MasterProblem.h" />
     <ClInclude Include="ModelData.h" />
+    <ClInclude Include="RawModel.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="SubProblem.h" />
   </ItemGroup>

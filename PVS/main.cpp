@@ -11,13 +11,13 @@ int main() {
 
 	MasterProblem mstr(gmd);
 
-	return 0;
+	//return 0;
 
 	BaseModel bm(gmd);
 
 	bm.addVariables();
 
-	if(1) {
+	if(0) {
 		HFunRace hfr(gmd);
 
 		auto x_ini = gmd.x_val;
@@ -31,7 +31,7 @@ int main() {
 
 	bm.setObjective();
 
-	bm.solveModel(0.01, 7200);
+	bm.solveModel(0.01, 100);
 
 	bm.saveSolution();
 

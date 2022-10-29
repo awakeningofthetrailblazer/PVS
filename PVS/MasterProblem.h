@@ -17,18 +17,18 @@ private:
 		GRBVar>> u_var;//|W|*|K|
 	unordered_map<int, unordered_map<int,
 		unordered_map<int,
-		GRBVar>>> x_var, psi_var;//|V|*|R|*|K|
-
-	unordered_map<int, unordered_map<int,
-		unordered_map<int,
-		unordered_map<int,
-		GRBVar>>>> y_var;//|V|*|V|*|R|*|K|
+		GRBVar>>> p_var;//|V|*|V|*|K|
+	GRBVar T_l;
 
 	void addVariables();
 
 	void addConstraints();
 
+	void showResult();
+
 public:
 	MasterProblem(ModelData& gmd);
 	~MasterProblem();
+
+	void solveModel(double prec, double time_limit);
 };

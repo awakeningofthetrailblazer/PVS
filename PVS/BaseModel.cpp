@@ -233,6 +233,7 @@ void BaseModel::addConstraints() {
 	//one by one, avaliable time
 	cout << "constraints: one by one, avaliable time" << endl;
 	for (int r = 0; r < md->R_amount; r++) {
+		cout << "r:" << r << endl;
 		for (auto k : md->vehicle_set) {
 			GRBLinExpr expr_left = 0;
 
@@ -278,7 +279,6 @@ void BaseModel::addConstraints() {
 			}
 
 			model->addConstr(epsi_var[r][k] <= md->T_m * expr);
-			model->addConstr(epsi_var[r][k] >= -md->T_m * expr);
 		}
 	}
 

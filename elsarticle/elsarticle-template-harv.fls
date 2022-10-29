@@ -1,8 +1,8 @@
-PWD d:/AWKTB2022/UMS/elsarticle
+PWD d:/AWKTB2022/UMS/PVS_STORE/PVS/elsarticle
 INPUT c:/texlive/2022/texmf.cnf
 INPUT c:/texlive/2022/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT d:/AWKTB2022/UMS/elsarticle/elsarticle-template-harv.tex
+INPUT d:/AWKTB2022/UMS/PVS_STORE/PVS/elsarticle/elsarticle-template-harv.tex
 OUTPUT elsarticle-template-harv.log
 INPUT c:/texlive/2022/texmf-dist/tex/latex/elsarticle/elsarticle.cls
 INPUT c:/texlive/2022/texmf-dist/tex/latex/elsarticle/elsarticle.cls

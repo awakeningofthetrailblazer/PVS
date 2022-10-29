@@ -45,7 +45,7 @@ void ModelData::Rgernalize(double mincap) {
 void ModelData::tinyDemo() {
 	cout << "use a tiny demo" << endl;
 
-	ifstream fin("tinydemo6.txt", ios::in);
+	ifstream fin("tinydemo.txt", ios::in);
 
 	if (!fin.is_open()) {
 		cout << "cannot open file !" << endl;
@@ -145,15 +145,18 @@ void ModelData::LiLimBenchmark() {
 	double demand, st, et, ser_time;
 	string type_name;
 
-	for (int k = 1; k <= a; k++) {
+	type_set.insert("TYPE-1");
+	type_set.insert("TYPE-2");
+	type_set.insert("TYPE-3");
+
+	for (int k = 1; k <= max(a, int(type_set.size())); k++) {
 		vehicle_set.insert(k);
-		capacity[k] = k % 2 ? b : b;
+
+		capacity[k] = k % 2 ? 7 : 8;
 
 		mincap = min(mincap, capacity[k]);
 	}
 
-	type_set.insert("TYPE-1");
-	type_set.insert("TYPE-2");
 
 	int cnt = 0;
 	while (!fin.eof()) {
@@ -180,7 +183,9 @@ void ModelData::LiLimBenchmark() {
 
 		fin >> a >> b;
 
-		type_name = b % 2 ? "TYPE-1" : "TYPE-2";
+		if (b % 3 == 0) type_name = "TYPE-1";
+		if (b % 3 == 1) type_name = "TYPE-2";
+		if (b % 3 == 2) type_name = "TYPE-3";
 
 		if (b) {
 			//cout << type_name << ' ' << id << ' ' << b << ' ' << demand << endl;

@@ -10,7 +10,9 @@ MasterProblem::MasterProblem(ModelData& gmd):md(&gmd) {
 	addVariables();
 	addConstraints();
 
-	model->optimize();
+	solveModel(0.2, 20);
+
+	showResult();
 }
 
 MasterProblem::~MasterProblem() {
@@ -22,158 +24,111 @@ MasterProblem::~MasterProblem() {
 
 void MasterProblem::addVariables() {
 	//U
-
 	cout << "add U" << endl;
-	for (auto wt : md->type_set) {
+	for (auto w : md->type_set) {
 		for (auto k : md->vehicle_set) {
-			u_var[wt][k] = model->addVar(0, 1, 0, GRB_BINARY);
+			u_var[w][k] = model->addVar(0, 1, 0, GRB_BINARY);
 		}
 	}
 
-	//X, PSI
-	cout << "add X,PSI" << endl;
-	for (auto i : md->task_set) {
-		for (int r = 0; r <= md->R_amount; r++) {
+	//P
+	cout << "add P" << endl;
+	for (auto dd : md->demand_set) {
+		for (auto d : dd.second) {
 			for (auto k : md->vehicle_set) {
-				x_var[i][r][k] = model->addVar(0, 1, 0, GRB_BINARY);
-				psi_var[i][r][k] = model->addVar(0, 1, 0, GRB_BINARY);
+				double cost = md->serving_time[d[0]][k]
+					+ md->serving_time[d[1]][k]
+					+ md->travel_cost[d[0]][d[1]];
+				p_var[d[0]][d[1]][k] = model->addVar(0, md->R_amount, 0, GRB_INTEGER);
 			}
 		}
 	}
 
-	//Y
-	cout << "add Y" << endl;
-	for (auto i : md->task_set) {
-		for (auto j : md->task_set) {
-			for (int r = 0; r <= md->R_amount; r++) {
-				for (auto k : md->vehicle_set) {
-					y_var[i][j][r][k] = model->addVar(0, 1, 0, GRB_BINARY);
-				}
-			}
-		}
-	}
+	//T_l
+	T_l = model->addVar(0, md->T_m, 1, GRB_CONTINUOUS);
 
 	cout << "finish adding variables" << endl;
 }
 
 void MasterProblem::addConstraints() {
-	//orgin and destination
-	cout << "constraints: orgin and destination" << endl;
-	for (auto k : md->vehicle_set) {
-		x_var[md->depot][0][k].set(GRB_DoubleAttr_LB, 1);
-		x_var[md->depot][md->R_amount][k].set(GRB_DoubleAttr_LB, 1);
-		psi_var[md->depot][0][k].set(GRB_DoubleAttr_LB, 1);
-		psi_var[md->depot][md->R_amount][k].set(GRB_DoubleAttr_LB, 1);
-
-		for (auto i : md->task_set) {
-			if (i == md->depot) continue;
-			x_var[i][0][k].set(GRB_DoubleAttr_UB, 0);
-			x_var[i][md->R_amount][k].set(GRB_DoubleAttr_UB, 0);
-			psi_var[i][0][k].set(GRB_DoubleAttr_UB, 0);
-			psi_var[i][md->R_amount][k].set(GRB_DoubleAttr_UB, 0);
-		}
-	}
-	for (int r = 1; r < md->R_amount; r++) {
-		for (auto k : md->vehicle_set) {
-			x_var[md->depot][r][k].set(GRB_DoubleAttr_UB, 0);
-		}
-	}
-
-	for (int r = 0; r <= md->R_amount; r++) {
-		for (auto k : md->vehicle_set) {
-			for (auto i : md->task_set) {
-				y_var[i][i][r][k].set(GRB_DoubleAttr_UB, 0);
-			}
-		}
-	}
-
-	//single occupied
-	cout << "constraints: single occupied" << endl;
-	for (int r = 0; r < md->R_amount; r++) {
-		GRBLinExpr expr1 = 0, expr2 = 0;
-
-		for (auto i : md->task_set) {
-			for (auto k : md->vehicle_set) {
-				expr2 += x_var[i][r][k] - x_var[i][r + 1][k];
-				expr1 += x_var[i][r][k];
-			}
-		}
-		if (r) model->addConstr(expr1 <= 1, "single occupied 1 ");
-		if (r < md->R_amount - 1) model->addConstr(expr2 >= 0, "single occupied 2 ");
-
-		for (auto k : md->vehicle_set) {
-			GRBLinExpr expr3 = 0, expr4 = 0;
-			for (auto i : md->task_set) {
-				expr3 += psi_var[i][r][k] - psi_var[i][r + 1][k];
-				expr4 += psi_var[i][r][k];
-			}
-			//if (r < md->R_amount - 1) model->addConstr(expr3 >= 0);
-			if (r) model->addConstr(expr4 == 1);
-
-		}
-	}
-
-	//single vehicle sequence
-	cout << "constraints: single vehicle sequence" << endl;
-	for (int r = 1; r < md->R_amount; r++) {
-		for (auto k : md->vehicle_set) {
-			for (auto i : md->task_set) {
-				GRBLinExpr expr = 0;
-				for (auto j : md->task_set) {
-					expr -= y_var[i][j][r][k];
-				}
-				expr += x_var[i][r][k] + psi_var[i][r - 1][k] - psi_var[i][r][k];
-				model->addConstr(expr == 0, "single vehicle sequence ");
-			}
-		}
-	}
-
 	//compatibility constraints
-	cout << "constraints: compatibility constraints" << endl;
 	for (auto k : md->vehicle_set) {
 		GRBLinExpr expr = 0;
 		for (auto w : md->type_set) {
 			expr += u_var[w][k];
-
-			for (auto d : md->demand_set[w]) {
-				for (int r = 1; r < md->R_amount; r++) {
-					model->addConstr(y_var[d[0]][d[1]][r][k] <= u_var[w][k],
-						"compatibility 1 _");
-				}
-			}
-
-
 		}
-		model->addConstr(expr <= 1, "compatibility 2 " );
+		model->addConstr(expr <= 1);
+	}
+
+	for (auto dd : md->demand_set) {
+		for (auto d : dd.second) {
+			for (auto k : md->vehicle_set) {
+				model->addConstr(p_var[d[0]][d[1]][k] <= md->R_amount * u_var[dd.first][k]);
+			}
+		}
 	}
 
 	//fulfill demand
-	cout << "constraints: fulfill demand" << endl;
 	for (auto dd : md->demand_set) {
 		for (auto d : dd.second) {
 			GRBLinExpr expr = 0;
 			for (auto k : md->vehicle_set) {
-				for (int r = 1; r < md->R_amount; r++) {
-					expr += md->capacity[k] * y_var[d[0]][d[1]][r][k];
-				}
+				expr += p_var[d[0]][d[1]][k] * md->capacity[k];
 			}
-			model->addConstr(expr >= md->demand_amount[dd.first][d[0]][d[1]],
-				"fulfill demand_");
+			model->addConstr(expr >= md->demand_amount[dd.first][d[0]][d[1]]);
 		}
 	}
 
-	//Y
-	cout << "constraints: Y ref" << endl;
+	//makespan
+	cout << "add P" << endl;
 	for (auto k : md->vehicle_set) {
-		for (int r = 1; r <= md->R_amount; r++) {
-			for (auto i : md->task_set) {
-				for (auto j : md->task_set) {
-					model->addConstr(y_var[i][j][r][k] <= psi_var[i][r - 1][k]);
-					model->addConstr(y_var[i][j][r][k] <= x_var[j][r][k]);
-					model->addConstr(y_var[i][j][r][k] >=
-						psi_var[i][r - 1][k] + x_var[j][r][k] - 1);
-				}
+		GRBLinExpr expr = 0;
+		for (auto dd : md->demand_set) {
+			for (auto d : dd.second) {
+				double cost = 0;
+				cost += md->travel_cost[d[0]][d[1]];
+				cost += md->serving_time[d[0]][k];
+				cost += md->serving_time[d[1]][k];
+				expr += cost * p_var[d[0]][d[1]][k];
+			}
+		}
+		model->addConstr(expr <= T_l);
+	}
+
+	cout << "finish adding constraints" << endl;
+}
+
+void MasterProblem::showResult() {
+	if (model->get(GRB_IntAttr_SolCount) == 0) return;
+
+	//U
+	cout << "add U" << endl;
+	for (auto w : md->type_set) {
+		cout << w << ":";
+		for (auto k : md->vehicle_set) {
+			if (u_var[w][k].get(GRB_DoubleAttr_X) > 0.5)cout << "\t" << k;
+		}
+		cout << endl;
+	}
+
+	//P
+	cout << "add P" << endl;
+	for (auto k : md->vehicle_set) {
+		cout << k << ":" << endl;
+		for (auto dd : md->demand_set) {
+			for (auto d : dd.second) {
+				if (p_var[d[0]][d[1]][k].get(GRB_DoubleAttr_X) > 0.5)
+					cout << "\t" << d[0] << "->" << d[1] << ": \t"
+					<< p_var[d[0]][d[1]][k].get(GRB_DoubleAttr_X) << endl;
 			}
 		}
 	}
+}
+
+void MasterProblem::solveModel(double prec, double time_limit) {
+	model->set(GRB_DoubleParam_MIPGap, prec);
+
+	model->set(GRB_DoubleParam_TimeLimit, time_limit);
+
+	model->optimize();
 }

@@ -4,7 +4,7 @@
 #include"ModelData.h"
 
 class HFunRace {
-	ModelData* md = nullptr;
+	ModelData* md;
 public:
 	HFunRace(ModelData& gmd);
 	~HFunRace();
