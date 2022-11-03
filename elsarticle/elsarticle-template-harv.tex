@@ -127,9 +127,9 @@ An application to automated guided vehicle  scheduling}
 \begin{keyword}
     Scheduling problem \sep
     Minimum makespan \sep
+    Reentrant blocking job shop \sep
     Eligibility constraints \sep
     Automated guided vehicle \sep
-    Benders decomposition
 %% keywords here, in the form: keyword \sep keyword
 
 %% PACS codes here, in the form: \PACS code \sep code
@@ -146,10 +146,28 @@ An application to automated guided vehicle  scheduling}
 %% main text
 \section{Introduction}
 
+Many features displayed in practice are always 
+not addressed in single "classical" problem.
+Take a kind of vehicle scheduling problems as an example, 
+the limited capacity of some vehicles forces them to visit 
+specific customers or locations over once, which is not applicable to
+traditional vehicle routing model pairing the vehicles 
+and arcs among customers, 
+and considering the time products transfered not negligible
+is not common in scheduling problem. 
+
+
+Two more tricky requirements is that
+one vehicle can only handle products of one type, 
+and a customer or location 
+can be served by no more than one vehicle at a time.
+
 In this paper, a scheduling problem of multiple vehicles and product types is investigated. 
 The problem has the  characteristics of both vehicle problems with pickups and deliveries,
 and unrelated and uniform parallel machine scheduling problems.
 
+
+The paper is organized as follows. The vehicle scheduling problem is described in section. 
 
 \section{Literature review}
 
@@ -200,6 +218,13 @@ makespan (the time that all jobs are complete),
 (weighted) total tardiness,
 and more.
 
+Subproblems of scheduling problem: 
+1. Loading involces assigning tasks to resources. 
+if each task can be processed by only one specific resource, no difficulty is presented. 
+2. Sequencing is concerned with determining the order in which jobs are processed, 
+also within each resource.
+3. Scheduling pertains to establishing both the 
+timing and use of resources within an organization.
 
 As another famous optimization problem, Machine Scheduling (MS) 
 is widely applied in manufacturing, logistics.
@@ -219,6 +244,33 @@ and then propose MILP models.
 To be easier to describe this problem, the notations used in this paper are listed in Table \ref{tab1}.
 
 \subsection{Consumption and preprocessing}
+
+Gernal assumption in static scheduling problems:
+A machine can process only one job at a time. 
+A task, once tasken up, is fully completed before the next task is taken. 
+A task of a job is done on only one machine. There is no job splitting.
+There is no job pre-emption. A task cannot be stopped midway for another task. 
+
+To break:
+No assemblies or divergences. 
+Each task has only one precedent and one successor.
+There is only a machine of each type (otherwise grouping and balancing)
+
+Johnson's rule, Hodgson's Algorithm
+
+Priority rules.
+
+Total slack: 
+
+$Slack = dur date - actual date - processing time of remaining operations$
+Jobs are scheduled in increasing slack, first those with lower slack. 
+If there is negative slack the job will not be on time by th due date.
+
+Critical ratio (CR)
+
+$Critical ratio=\frac{due date - actual date }{processing time of remaining operatyions}$
+Again, jobs are scheduled in increasing CR, first those with lower CR.
+
 
 \subsection{Mathematical formulation}
 

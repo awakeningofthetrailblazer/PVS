@@ -4,6 +4,10 @@
 
 #include<fstream>
 
+#include "matplotlibcpp.h"
+
+namespace plt = matplotlibcpp;
+
 class ModelData
 {
 private:
@@ -22,6 +26,18 @@ private:
 		double waiting_time;
 	};
 	vector<SOL> solution_vec;
+
+	struct SCHEMA {
+		string vehname;
+		vector<double> xcoord, ycoord;
+	};
+	map<string, SCHEMA> gantt;
+
+	struct SCHEMA3D {
+		string vehname;
+		vector<double> xcoord, ycoord, zcoord;
+	};
+	map<string, SCHEMA3D> gantt3d;
 
 public:
 	/*====sets====*/

@@ -1,0 +1,13 @@
+﻿  main.cpp
+C:\vcpkg\vcpkg\installed\x64-windows\include\matplotlibcpp.h(1491,48): warning C4244: “=”: 从“size_t”转换到“_Ty”，可能丢失数据
+          with
+          [
+              _Ty=double
+          ]
+C:\vcpkg\vcpkg\installed\x64-windows\include\matplotlibcpp.h(2455): message : 查看对正在编译的函数 模板 实例化“bool matplotlibcpp::plot<double>(const std::vector<double,std::allocator<double>> &,const std::string &)”的引用
+  正在生成代码
+  1 of 3154 functions (<0.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    2 functions had inline decision re-evaluated but remain unchanged
+  已完成代码的生成
+  PVS.vcxproj -> D:\AWKTB2022\UMS\PVS_STORE\PVS\PVS\x64\Release\PVS.exe

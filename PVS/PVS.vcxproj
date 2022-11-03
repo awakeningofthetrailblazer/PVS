@@ -104,13 +104,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\gurobi951\win64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files\MySQL\MySQL Server 8.0\include;C:\Users\modi\AppData\Roaming\Python\Python39\site-packages\numpy\core\include;C:\ProgramData\Miniconda3\include;C:\gurobi951\win64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\gurobi951\win64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>gurobi95.lib;gurobi_c++mdd2019.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Program Files\MySQL\MySQL Server 8.0\lib;C:\gurobi951\win64\lib;C:\ProgramData\Miniconda3\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>gurobi95.lib;gurobi_c++mdd2019.lib;libmysql.lib;python3.lib;python39_d.lib;_tkinter.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -121,17 +121,21 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\modi\AppData\Roaming\Python\Python39\site-packages\numpy\core\include;C:\Program Files\MySQL\MySQL Server 8.0\include;C:\gurobi951\win64\include;C:\ProgramData\Miniconda3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Program Files\MySQL\MySQL Server 8.0\lib;C:\gurobi951\win64\lib;C:\ProgramData\Miniconda3\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>gurobi95.lib;gurobi_c++md2019.lib;libmysql.lib;python3.lib;python39_d.lib;_tkinter.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BaseModel.cpp" />
     <ClCompile Include="BendersCut.cpp" />
+    <ClCompile Include="BNB.cpp" />
     <ClCompile Include="HFunRace.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MasterProblem.cpp" />
@@ -142,6 +146,7 @@
   <ItemGroup>
     <ClInclude Include="BaseModel.h" />
     <ClInclude Include="BendersCut.h" />
+    <ClInclude Include="BNB.h" />
     <ClInclude Include="headfiles.h" />
     <ClInclude Include="HFunRace.h" />
     <ClInclude Include="MasterProblem.h" />

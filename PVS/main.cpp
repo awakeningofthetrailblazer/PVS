@@ -5,7 +5,7 @@
 
 int main() {
 
-	ModelData gmd(1);
+	ModelData gmd(0);
 
 	HFunRace hfr(gmd);
 
@@ -31,7 +31,7 @@ int main() {
 
 	bm.setObjective();
 
-	bm.solveModel(0.01, 100);
+	bm.solveModel(0.1, 600);
 
 	bm.saveSolution();
 

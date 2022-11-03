@@ -1,2 +1,8 @@
-﻿  BaseModel.cpp
+﻿  main.cpp
+C:\vcpkg\vcpkg\installed\x64-windows\include\matplotlibcpp.h(1491,48): warning C4244: “=”: 从“size_t”转换到“_Ty”，可能丢失数据
+          with
+          [
+              _Ty=double
+          ]
+C:\vcpkg\vcpkg\installed\x64-windows\include\matplotlibcpp.h(2455): message : 查看对正在编译的函数 模板 实例化“bool matplotlibcpp::plot<double>(const std::vector<double,std::allocator<double>> &,const std::string &)”的引用
   PVS.vcxproj -> D:\AWKTB2022\UMS\PVS_STORE\PVS\PVS\x64\Debug\PVS.exe

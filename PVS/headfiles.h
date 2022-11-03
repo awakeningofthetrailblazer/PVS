@@ -10,3 +10,6 @@
 #include<sstream>
 
 using namespace std;
+
+static string itos(int i) { stringstream s; s << i; return s.str(); }
+static string dtos(double d) { stringstream s; s << d; return s.str(); }

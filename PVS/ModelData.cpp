@@ -234,6 +234,12 @@ void ModelData::printDataDetails() {
 		}
 	}
 
+	for (auto k : vehicle_set) {
+		gantt["vehicle" + itos(k)].vehname = "vehicle" + itos(k);
+		gantt["vehicle" + itos(k)].xcoord.push_back(0);
+		gantt["vehicle" + itos(k)].ycoord.push_back(0);
+	}
+
 	solution_vec.push_back({ 0,0,0,0 });
 
 	for (int r = 1; r < R_amount; r++) {
@@ -241,11 +247,27 @@ void ModelData::printDataDetails() {
 		for (auto i : task_set) {
 			for (auto k : vehicle_set) {
 				if (x_val[i][r][k] > 0.5) {
+					
+
 					solution_vec[r] = { i,k };
 					solution_vec[r].start_time = g_val[i][r + 1] - serving_time[i][k];
+
+					if (epsi_val[r][k] > 0.1 && i) {
+						gantt["vehicle" + itos(k)].xcoord.push_back(solution_vec[r].start_time - epsi_val[r][k]);
+						gantt["vehicle" + itos(k)].ycoord.push_back(i);
+					}
+
+					gantt["vehicle" + itos(k)].xcoord.push_back(solution_vec[r].start_time);
+					gantt["vehicle" + itos(k)].ycoord.push_back(i);
+
 					solution_vec[r].waiting_time = epsi_val[r][k];
 					cout << "\t" << r << ":\tvehicle-" << k << "\tstart task-" << i;
 					cout << "\tat\t" << solution_vec[r].start_time;
+					cout << "\tfor\t" << serving_time[i][k];
+
+					gantt["vehicle" + itos(k)].xcoord.push_back(solution_vec[r].start_time + serving_time[i][k]);
+					gantt["vehicle" + itos(k)].ycoord.push_back(i);
+
 					if (epsi_val[r][k] > 0.01)
 						cout << "\tafter waiting for\t" << epsi_val[r][k] << " ," << endl;
 					else cout << "\twithout waiting ," << endl;
@@ -254,6 +276,8 @@ void ModelData::printDataDetails() {
 		}
 	}
 
+	
+
 	cout << "======TAU:" << endl;
 	for (auto k : tau_finish) {
 		cout << "vehicle" << k.first << " 0"
@@ -261,6 +285,29 @@ void ModelData::printDataDetails() {
 	}
 
 	cout << "T_finish" << T_finish << endl;
+
+	for (auto k : vehicle_set) {
+		gantt["vehicle" + itos(k)].xcoord.push_back(tau_finish[k]);
+		gantt["vehicle" + itos(k)].ycoord.push_back(0);
+
+		plt::named_plot("vehicle" + itos(k),
+			gantt["vehicle" + itos(k)].xcoord,
+			gantt["vehicle" + itos(k)].ycoord);
+
+	}
+
+	plt::xlabel("time");
+
+	plt::ylabel("machine");
+
+	// Add graph title
+	plt::title("Sample figure");
+	// Enable legend.
+	plt::legend();
+
+	plt::grid(1);
+
+	plt::show();
 
 	//return;
 

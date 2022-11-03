@@ -1,8 +1,5 @@
 #include "BaseModel.h"
 
-string itos(int i) { stringstream s; s << i; return s.str(); }
-string dtos(double d) { stringstream s; s << d; return s.str(); }
-
 BaseModel::BaseModel(ModelData& gmd):md(&gmd) {
 	cout << "initialize base model..." << endl;
 

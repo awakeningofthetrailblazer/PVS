@@ -39,6 +39,9 @@
     <ClCompile Include="RawModel.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="BNB.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ModelData.h">
@@ -66,6 +69,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="RawModel.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BNB.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

@@ -10,7 +10,7 @@ MasterProblem::MasterProblem(ModelData& gmd):md(&gmd) {
 	addVariables();
 	addConstraints();
 
-	solveModel(0.2, 20);
+	solveModel(0.2, 60);
 
 	showResult();
 }
